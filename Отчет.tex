@@ -1,0 +1,81 @@
+%% -*- coding: utf-8 -*-
+\documentclass[12pt,a4paper]{scrartcl} 
+%\usepackage[14pt]{extsizes}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage{misccorr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[left=20mm, top=15mm, right=15mm, bottom=15mm, nohead, footskip=10mm]{geometry}
+\begin{document}
+\begin{titlepage}
+  \begin{center}
+    \large
+    МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ \\РОССИЙСКОЙ ФЕДЕРАЦИИ\\
+    федеральное государственное автономное образовательное учреждение высшего образования\\
+    «САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ 
+    АЭРОКОСМИЧЕСКОГО ПРИБОРОСТРОЕНИЯ»
+
+    Кафедра 43   
+    \end{center}
+	\vfill
+	\noindent КУРСОВОЙ ПРОЕКТ
+    \normalsize{}\\
+    \normalsize{ЗАЩИЩЕН С ОЦЕНКОЙ}\\
+    \normalsize{РУКОВОДИТЕЛЬ}
+    
+    \underline{ст.преп}
+    \hspace{5cm}
+    \underline{\hspace{3cm}}
+    \hspace{3cm}
+    \underline{М.Д.Поляк}
+    \vfill
+    
+	\begin{center}
+	\normalsize{ПОЯСНИТЕЛЬНАЯ ЗАПИСКА}\\
+	\normalsize{К КУРСОВОМУ ПРОЕКТУ}\\
+	\vfill
+	\normalsize{СИСТЕМА СЛЕЖЕНИЯ}\\
+	\vfill
+    \textsc{по дисциплине: ОПЕРАЦИОННЫЕ СИСТЕМЫ}\\
+	\end{center}
+
+	\vfill
+	\noindent РАБОТУ ВЫПОЛНИЛА
+	\normalsize{}\\  
+	\normalsize{СТУДЕНТКА ГР.}\hspace{1cm}\underline{4331}
+	\hspace{2cm}
+	\underline{\hspace{3cm}}
+	\hspace{3cm}
+	\underline{Т.А.Белозуб}
+\vfill
+
+\begin{center}
+  Санкт-Петербург, 2016 г.
+\end{center}
+\end{titlepage}
+\newpage
+%\normalsize{Цель работы: реализовать демон для веб-камеры под Linux}\\
+\tableofcontents % Вывод содержания
+\newpage
+\section{Цель работы}
+	\normalsize{Цель работы: реализовать демон для веб-камеры под ОС Linux}
+\section{Задание}
+	Реализовать демон для веб-камеры, который делает снимок с
+	камеры каждые 30 секунд и сохраняет его на диске в одном из популярных сжатых
+	графических форматов (JPEG, TIFF, и т.п.). Предусмотреть возможность настройки
+	временного интервала между снимками и пути, по которому сохраняются файлы.
+\section{Сравнение с аналогами}
+	Есть программа, написанная на си, с похожим функционалом для ОС Linux под названием Motion. Она позволяет каждые N секунд делать снимки, позволяет пользователю указывать путь к сохраняемому файлу. Также имеется возможность выбора формата имени файла, что отсутствует в разработанном демоне. Однако данная программа лишена возможности автозапуска при загрузке системы.
+\section{Техническая документация}
+\subsection{Установка}
+	Склонировать репозиторий с github при помощи команды: \begin{verbatim}
+	git clone https://github.com/tantanieli/Daemon-for-Webcamera.git
+	\end{verbatim}Для работы демона необходим установленный python версии 3.5.2 и выше.
+\subsection{Использование}
+	Разработанный демон поддерживает следующие команды: start, stop, status. Вызов команды осуществляется следующим образом: python main.py <команда>. Команда start запускает демона и создает PID-файл с ID процесса. Команда status сообщает о статусе демона(работает он или нет), а так же ID процесса, если демон запущен. Команда stop останавливает работу демона. 
+\section{Выводы}
+	В процессе выполнения данной курсовой работы мною были получены знания и навыки, необходимые для работы с вебкамерой в ОС семейства Linux, а так же знания и навыки в написании демонов.
+\normalsize{Цель работы: реализовать демон для веб-камеры под Linux}
+\end{document}
